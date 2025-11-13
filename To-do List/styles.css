@@ -1,0 +1,76 @@
+
+header {
+  border: 1px solid #000;
+  border-radius: 10px;
+  max-width: 50rem;
+  min-width: 360px;
+  height: 5vh;
+  margin: 3rem auto;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0.5rem 2rem;
+  gap: 20px;
+}
+
+#add {
+  max-width: 80px;
+  min-width: 70px;
+  height: 5vh;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #3e3eed;
+  color: #fff;
+  font-weight: 600;
+  transition: background-color .5s ease;
+}
+
+#add:hover {
+  background-color: #1818ba;
+}
+
+#delete {
+  max-width: 80px;
+  min-width: 70px;
+  height: 5vh;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #ed3e3e;
+  color: #fff;
+  font-weight: 600;
+  transition: background-color .5s ease;
+}
+
+#delete:hover {
+  background-color: #961212;
+}
+
+#toggle {
+  display: none;
+}
+
+#toggle-container {
+  border: 1px solid #000;
+  border-radius: 25px;
+  width: 40px;
+  height: 2vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.switch {
+  background-color: #000;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  transition: all .5s ease;
+  position: absolute;
+  left: -1px;
+}
+
+#toggle:checked ~ .switch {
+  transform: translateX(110%);
+}
