@@ -1,3 +1,10 @@
+html, body {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  overflow: hidden;
+}
 
 header {
   border: 1px solid #000;
@@ -30,6 +37,10 @@ header {
   background-color: #1818ba;
 }
 
+#add:active {
+  background-color: #b0b0d7;
+}
+
 #delete {
   max-width: 80px;
   min-width: 70px;
@@ -59,6 +70,7 @@ header {
   display: flex;
   align-items: center;
   position: relative;
+  cursor: pointer;
 }
 
 .switch {
@@ -73,4 +85,48 @@ header {
 
 #toggle:checked ~ .switch {
   transform: translateX(110%);
+}
+
+.container {
+  border: 1px solid #000;
+  border-radius: 5px;
+  max-width: 700px;
+  min-width: 500px;
+  height: 65vh;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+label {
+  display: flex;
+  gap: 10px;
+}
+
+.pop-up {
+  border: 1px solid #000;
+  border-radius: 5px;
+  width: 300px;
+  height: 40vh;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  background-color: #fff;
+  padding: 10px;
+  transition: opacity .5s ease;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #0000008f;
+  backdrop-filter: blur(2px);
+  transition: opacity .5s ease;
+  opacity: 0;
+  pointer-events: none;
 }

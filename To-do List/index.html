@@ -17,8 +17,21 @@
   </header>
 
   <section class="container">
-
+    <label for="task-box">
+      <input type="checkbox" name="task-box" id="task-box">
+      <p>Task 1</p>
+    </label>
+    <hr>
   </section>
+
+  <section class="add pop-up" id="pop-up">
+    <label for="task">Task:</label>
+    <input type="text" name="task" id="task" placeholder="Enter task...">
+    <button id="done">Done</button>
+    <button id="cancel">Cancel</button>
+  </section>
+
+  <div class="overlay"></div>
   
   <script src="script.js"></script>
 </body>
