@@ -11,7 +11,16 @@ const checkbox = document.createElement('input');
 checkbox.type = 'checkbox';
 checkbox.name = 'task-box';
 checkbox.id = 'task-box';
+const container = document.querySelector('.container');
+const task = document.getElementById('task');
 
+function AddTask () {
+  let newTask = task.value;
+  para.innerText = newTask;
+  label.append(checkbox, para);
+  container.append(label, hr);
+  CancelTask();
+}
 
 function AddPop () {
   popUp.style.opacity = 1;
@@ -27,3 +36,15 @@ function CancelTask () {
 
 add.addEventListener('click', AddPop);
 cancel.addEventListener('click', CancelTask);
+done.addEventListener('click', AddTask);
+
+
+
+/*
+Problem 1:
+it adds task but only add 1 task;
+
+Problem 2:
+the input does not return empty after entering a new task
+*/
+
