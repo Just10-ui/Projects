@@ -3,22 +3,23 @@ const popUp = document.getElementById('pop-up');
 const overlay = document.querySelector('.overlay');
 const done = document.getElementById('done');
 const cancel = document.getElementById('cancel');
-const para = document.createElement('p');
-const hr = document.createElement('hr');
-const label = document.createElement('label');
-label.setAttribute('for', 'task-box');
-const checkbox = document.createElement('input');
-checkbox.type = 'checkbox';
-checkbox.name = 'task-box';
-checkbox.id = 'task-box';
 const container = document.querySelector('.container');
 const task = document.getElementById('task');
 
 function AddTask () {
+  const para = document.createElement('p');
+  const hr = document.createElement('hr');
+  const label = document.createElement('label');
+  label.setAttribute('for', 'task-box');
+  const checkbox = document.createElement('input');
+  checkbox.type = 'checkbox';
+  checkbox.name = 'task-box';
+  checkbox.id = 'task-box';
   let newTask = task.value;
   para.innerText = newTask;
   label.append(checkbox, para);
   container.append(label, hr);
+  newTask = task.defaultValue;
   CancelTask();
 }
 
