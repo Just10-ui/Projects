@@ -1,0 +1,48 @@
+body {
+  overflow-y: hidden;
+}
+
+header {
+  border: 1px solid #000;
+  border-radius: 10px;
+  padding: 10px 20px;
+}
+
+#add {
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  background-color: #0f4ad2;
+  color: #fff;
+  padding: 5px 10px;
+  transition: background-color .5s ease-in-out;
+}
+
+#add:hover {
+  background-color: #072e87;
+}
+
+main {
+  border: 1px solid #000;
+  margin: 2rem auto;
+  width: 500px;
+  height: 80vh;
+  border-radius: 5px;
+  padding: 1em;
+}
+
+.product {
+  border: 1px solid #000;
+  border-radius: 3px;
+  padding: .5rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+#img {
+  border: 1px solid #000;
+  border-radius: 10px;
+  width: 50px;
+  height: 50px;
+}
