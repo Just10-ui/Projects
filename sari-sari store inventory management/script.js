@@ -13,6 +13,19 @@ function CreateItem() {
   let price = document.createElement('p');
   price.innerText = 'Price';
 
+  ProductId(product);
+
   container.append(product);
   product.append(image, productName, price);
+};
+
+function ProductId(product) {
+  const productLenght = document.getElementsByClassName('product');
+  let id = 1;
+
+  if (productLenght == 0) {
+    return product.id = 'product-' + id;
+  } else {
+    return product.id = 'product-' + (productLenght.length + id);
+  }
 }
