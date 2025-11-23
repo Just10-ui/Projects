@@ -8,11 +8,27 @@
 </head>
 <body>
   <header>
-    <button id="add">Add</button>
+    <button id="add" popovertarget="AddCard" popovertargetaction="show">Add</button>
   </header>
 
   <main class="container">
   </main>
+
+  <section id="AddCard" popover="auto">
+    <section class="data">
+      <label for="productName">
+        <input type="text" id="productName" name="productName" placeholder="Enter product name...">
+      </label>
+      <label for="price">
+        <input type="number" name="price" id="price" placeholder="Enter price...">
+      </label>
+    </section>
+    
+    <section class="buttons">
+      <button id="hide" popovertarget="AddCard" popovertargetaction="hide">Close</button>
+      <button id="done" popovertarget="AddCard" popovertargetaction="hide">Done</button>
+    </section>
+  </section>
 
   <script src="script.js"></script>
 </body>

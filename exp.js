@@ -1,17 +1,11 @@
-let array = ['item-1'];
+const names = document.getElementById('name');
+const add = document.getElementById('add');
 
-console.log(array);
+add.addEventListener('click', create);
 
-function Id(array, name) {
-  let id = 1;
-  let result;
-  if (array == 0) {
-   result = name + '-' + id;
-  } else {
-   result = name + '-' + (array.length + id);
-  }
+function create() {
+  const para = document.createElement('p');
+  para.innerText = names.value;
 
-  return array.push(result);
-};
-Id(array, 'item');
-console.log(array);
+  document.body.append(para);
+}
