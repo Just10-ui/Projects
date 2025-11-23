@@ -25,11 +25,12 @@ header {
 
 main {
   border: 1px solid #000;
-  margin: 2rem auto;
+  margin: 1.5rem auto;
   width: 500px;
   height: 80vh;
   border-radius: 5px;
   padding: 1em;
+  overflow: auto;
 }
 
 .product {
@@ -38,6 +39,7 @@ main {
   padding: .5rem;
   display: flex;
   justify-content: space-between;
+  margin-top: 10px;
 }
 
 #img {
