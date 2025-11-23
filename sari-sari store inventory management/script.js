@@ -4,13 +4,13 @@ const add = document.getElementById('add');
 add.addEventListener('click', CreateItem);
 
 function CreateItem() {
-  let product = document.createElement('div'); 
+  const product = document.createElement('div'); 
   product.className = 'product';
-  let image = document.createElement('div');
+  const image = document.createElement('div');
   image.id = 'img';
-  let productName = document.createElement('p');
+  const productName = document.createElement('p');
   productName.innerText = 'Product Name';
-  let price = document.createElement('p');
+  const price = document.createElement('p');
   price.innerText = 'Price';
 
   ProductId(product);
@@ -20,12 +20,12 @@ function CreateItem() {
 };
 
 function ProductId(product) {
-  const productLenght = document.getElementsByClassName('product');
-  let id = 1;
+  const productLength = document.querySelectorAll('.product');
+  const id = 1;
 
-  if (productLenght == 0) {
+  if (productLength.length === 0) {
     return product.id = 'product-' + id;
   } else {
-    return product.id = 'product-' + (productLenght.length + id);
+    return product.id = 'product-' + (productLength.length + id);
   }
 }
