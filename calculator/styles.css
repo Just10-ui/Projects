@@ -1,0 +1,38 @@
+.container {
+  border: 1px solid #000;
+  border-radius: 10px;
+  margin: 5rem auto;
+  padding: 20px;
+  width: 400px;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.screen {
+  border: 1px solid #000;
+  border-radius: 5px;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  overflow: hidden;
+}
+
+#screen {
+  font-size: 3rem;
+}
+
+.buttons {
+  height: 50vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+button {
+  width: 20%;
+  margin: 5px;
+  cursor: pointer;
+}
