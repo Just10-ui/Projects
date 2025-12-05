@@ -24,6 +24,13 @@
   font-size: 3rem;
 }
 
+#screen::after {
+  content: '';
+  height: 100%;
+  border: 1px solid #000;
+  animation: blink 1s steps(2, jump-start) infinite;
+}
+
 .buttons {
   height: 50vh;
   display: flex;
@@ -35,4 +42,13 @@ button {
   width: 20%;
   margin: 5px;
   cursor: pointer;
+}
+
+@keyframes blink {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
 }
