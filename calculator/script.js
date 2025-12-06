@@ -19,8 +19,26 @@ document.addEventListener('keydown', function(event) {
     document.getElementById('eight').click();
   } else if (event.key === '9') {
     document.getElementById('nine').click();
-  } else if (event.key === '10') {
-    document.getElementById('ten').click();
+  } else if (event.key === '0') {
+    document.getElementById('zero').click();
+  } else if (event.key === '-') {
+    document.getElementById('minus').click();
+  } else if (event.key === '=' || event.key === '+') {
+    document.getElementById('add').click();
+  } else if (event.key === 'x' || event.key === '*') {
+    document.getElementById('times').click();
+  } else if (event.key === '/') {
+    document.getElementById('divide').click();
+  } else if (event.key === 'Delete') {
+    document.getElementById('del').click();
+  } else if (event.key === 'Backspace') {
+    document.getElementById('back').click();
+  } else if (event.key === '.') {
+    document.getElementById('point').click();
+  } else if (event.key === 'Shift') {
+    document.getElementById('conv').click();
+  } else if (event.key === 'Enter') {
+    document.getElementById('equal').click();
   }
 });
 
