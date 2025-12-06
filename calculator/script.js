@@ -3,8 +3,40 @@ const screen = document.getElementById('screen');
 
 function AddToScreen(num) {
   const container = document.getElementById('screen-container');
+  const text = screen.innerText.split(/(\W)/g);
+  const arr = [];
 
-  screen.innerText += num;
+  for (let i = 0; i < text.length; i++) {
+    if (text[i] == '(') {
+      console.log(text[i]);
+      let s = '';
+      while(text[i] != ')') {
+        s += text[i];
+        i += 1;
+      }
+      s += text[i];
+      arr.push(s);
+    } 
+
+    if (text[i].match(/[x]/g)) {
+      const temp = text[i].split('');
+      temp.forEach(a => {
+        arr.push(a);
+      });
+    } else if (text[i] != '' && text[i] != ')') {
+      arr.push(text[i]);
+    }
+  }
+  console.log(arr);
+
+  const operator = num == '+' || num == '÷' || num == 'x' || num == '-';
+
+  if (operator && arr[arr.length - 1].match(/[+x÷-]/g) && !arr[arr.length - 1].match(/[()]/g)) {
+    arr[arr.length - 1] = num;
+    screen.innerText = arr.join('');
+  } else {
+    screen.innerText += num;
+  }
   container.scrollLeft = container.scrollWidth;
 };
 
@@ -19,6 +51,54 @@ function Delete() {
 }
 
 function Convert() {
+  const text = screen.innerText.split(/(\W)/g);
+  const arr = [];
+
+  console.log(text);
+
+  for (let i = 0; i < text.length; i++) {
+    if (text[i] == '(') {
+      console.log(text[i]);
+      let s = '';
+      while(text[i] != ')') {
+        s += text[i];
+        i += 1;
+      }
+      s += text[i];
+      arr.push(s);
+    } 
+  
+    if (text[i].match(/[x]/g)) {
+      const temp = text[i].split('');
+      temp.forEach(a => {
+        arr.push(a);
+      });
+    } else if (text[i] != '' && text[i] != ')') {
+      arr.push(text[i]);
+    }
+  }
+  console.log(arr);
+
+  if (arr[arr.length - 1] == '%') {
+    screen.innerText = arr.join('');
+  } else if (arr[arr.length - 1].match(/\D/g) && !arr[arr.length - 1].match(/[()]/g)) {
+    if (arr[arr.length - 2].match(/[()]/g)) {
+       arr[arr.length - 2] = arr[arr.length - 2].match(/\d/g)[0];
+    } else {
+      arr[arr.length - 2] = `(-${arr[arr.length - 2]})`;
+    }
+  } else {
+    if (arr[arr.length - 1].match(/[()]/g)) {
+       arr[arr.length - 1] = arr[arr.length - 1].match(/\d/g)[0];
+    } else {
+      arr[arr.length - 1] = `(-${arr[arr.length - 1]})`;
+    }
+  }
+  const result = arr.join('');
+  screen.innerText = result;
+}
+
+function Result() {
   const text = screen.innerText.split(/(\W)/g);
   const arr = [];
 
@@ -38,25 +118,11 @@ function Convert() {
       arr.push(text[i]);
     }
   }
-  console.log(arr);
 
-  if (arr[arr.length - 1].match(/\D/g) && !arr[arr.length - 1].match(/[()]/g)) {
-    if (arr[arr.length - 2].match(/[()]/g)) {
-       arr[arr.length - 2] = arr[arr.length - 2].match(/\d/g)[0];
-    } else {
-      arr[arr.length - 2] = `(-${arr[arr.length - 2]})`;
-    }
-  } else {
-    if (arr[arr.length - 1].match(/[()]/g)) {
-       arr[arr.length - 1] = arr[arr.length - 1].match(/\d/g)[0];
-    } else {
-      arr[arr.length - 1] = `(-${arr[arr.length - 1]})`;
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] == '%') {
+      arr[i - 1] = `${arr[i - 1]}%`
+      arr.splice(i, 1);
     }
   }
-  const result = arr.join('');
-  screen.innerText = result;
-}
-
-function Result() {
-  console.log(screen.innerText);
 }
