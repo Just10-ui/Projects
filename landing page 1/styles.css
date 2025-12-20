@@ -2,9 +2,9 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: "Inter", sans-serif;
+  font-family: "Inter", sans-serif; 
+  scroll-padding-top: 10px;
   scroll-behavior: smooth;
-  scroll-padding-top: 70px;
 }
 
 body {
@@ -30,7 +30,7 @@ header a {
 }
 
 #logo {
-  width: 80px;
+  width: 60px;
   border-radius: 50%;
   background-color: #F7F7F7;
 }
@@ -165,6 +165,7 @@ li a:hover::before {
   display: flex;
   flex-direction: column;
   align-items: center;
+  scroll-margin-top: 50px;
 }
 
 .services h1 {
@@ -204,4 +205,111 @@ li a:hover::before {
 .about {
   height: 100vh;
   background-color: #000;
+  display: flex;
+  align-items: center;
+  scroll-margin-top: 35px;
+}
+
+.about-content {
+  background-color: #F7F7F7;
+  padding: 56px 32px;
+  width: 100%;
+  height: 70vh;
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.about-content img {
+  border-radius: 10px;
+}
+
+.text h1 {
+  font-size: 3rem;
+  color: #FFB22C;
+}
+
+.text p {
+  text-align: justify;
+  font-size: 1.5rem;
+  padding-top: 32px;
+}
+
+.contact {
+  background-image: linear-gradient(#000, #FFB22C);
+  width: 100%;
+  height: 100vh;
+  scroll-margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #fff;
+  scroll-margin-top: 50px;
+}
+
+.contact h1 {
+  font-size: 3rem;
+  margin-left: 32px;
+}
+
+.contact-content {
+  width: 100%;
+  height: 80vh;
+  padding: 32px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.contact-content form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 50%;
+  gap: 10px;
+}
+
+.contact-content form #email {
+  width: 100%;
+  height: 7vh;
+  padding: 0 10px;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+}
+
+.contact-content form #message {
+  width: 100%;
+  height: 48vh;
+  padding: 15px 10px;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  text-align: start;
+  resize: none;
+}
+
+.contact-content form #submit {
+  width: 35%;
+  height: 7vh;
+  border: 2px solid #000;
+  background-color: #000;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all .5s ease;
+}
+
+.contact-content form #submit:hover {
+  background-color: #F7F7F7;
+  border: 2px solid #FFB22C;
+  color: #000;
+}
+
+address {
+  padding-top: 5rem;
+}
+
+address p {
+  margin-bottom: 20px;
 }
