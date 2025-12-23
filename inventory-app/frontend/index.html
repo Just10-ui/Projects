@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Inventory</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- this is for header -->
+  <header>
+    <a href="#" id="open-menu"><i class="fa-solid fa-bars"></i></a>
+  </header>
+
+  <!-- this is the body -->
+  <main>
+    <div class="header">
+      <input type="search" name="search" id="search-bar" placeholder="search" aria-label="search">
+      <select name="filter" id="filter" aria-label="filter">
+        <option value="all">All</option>
+        <option value="drinks">Drinks</option>
+        <option value="junk">Junk Foods</option>
+        <option value="canned">Canned Foods</option>
+      </select>
+    </div>
+  </main>
+
+  <!-- this is the footer -->
+  <footer>
+  </footer>
+
+  <!-- this is the menu -->
+  <aside id="menu">
+    <a href="#" id="close-menu"><i class="fa-solid fa-xmark"></i></a>
+    <nav>
+      <ul>
+        <li><a class="nav active" href="#">Home</a></li>
+        <li><a class="nav" href="account.html">Account</a></li>
+        <li><a class="nav" href="#">FAQ</a></li>
+      </ul>
+    </nav>
+  </aside>
+  
+  <script src="script.js"></script>
+</body>
+</html>
