@@ -22,4 +22,21 @@ export const getProducts = async (req, res) => {
     console.log(error);
     res.status(500).json({error: `Server can't be reached`});
   }
-}
+};
+
+export const deleteProduct = async (req, res) => {
+  const { ids } = req.body;
+
+  if (ids.length === 0) {
+    res.status(400).json({error: 'Bad request'});
+  };
+
+  try {
+    const result = await pool.query('DELETE FROM products WHERE id = ANY($1::int[]);', [ids]);
+
+    res.json({deleted: 'Deleted successfully'});
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({error: `Server can't be reached`});
+  }
+};
