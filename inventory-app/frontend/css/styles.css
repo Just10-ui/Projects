@@ -96,3 +96,29 @@ nav ul li a{
 .active {
   color: #7700bb;
 }
+
+main {
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.header {
+  margin-bottom: 1rem;
+}
+
+.image {
+  border: 1px solid #000;
+  padding: 1rem;
+}
+
+.product-card {
+  border: 1px solid #000;
+  margin: 0.5rem ;
+  padding: 7px;
+  padding-right: 10px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
