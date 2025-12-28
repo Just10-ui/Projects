@@ -1,5 +1,0 @@
-This app is mainly used in phones so no styles is intended for the PC or Laptop.
-
-- deleted all the folders cause I want to start in a blank state
-- created addProduct and getProduct to add and view all the products
-- added a delete controller that will delete a product based on its ID
