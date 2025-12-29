@@ -1,6 +1,6 @@
 import pool from '../database/db.js';
 
-export const viewProduct = async (req, res) => {
+export const viewProducts = async (req, res) => {
   try {
     const result = await pool.query('SELECT * FROM products;');
     const sorted = result.rows.sort((a, b) => a.name.localeCompare(b.name));
